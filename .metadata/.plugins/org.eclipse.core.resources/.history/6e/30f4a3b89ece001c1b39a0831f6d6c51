@@ -1,0 +1,4 @@
+ChromeDriverpath=./Drivers/chromedriver.exe
+URL=https://demo.guru99.com/v4/
+UserID=mngr403581
+password=epAzaza

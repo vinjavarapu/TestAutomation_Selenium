@@ -1,0 +1,15 @@
+package Testcases;
+
+import org.testng.annotations.Test;
+
+import utility.BaseClass;
+
+public class GuruLogin_TC1 extends BaseClass {
+	
+	@Test
+	public void Login_TC01() {
+		
+		
+	}
+
+}

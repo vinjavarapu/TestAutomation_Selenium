@@ -1,0 +1,29 @@
+package utility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+public class BaseClass {
+	
+	public ConfigReader config;
+	public WebDriver driver;
+	@BeforeTest
+	public void SetUP() {
+		
+		config = new ConfigReader();
+		System.setProperty("webdriver.chrome.driver",config.getChromeDriverPath());
+		driver = new ChromeDriver();
+		driver.get(config.getURL());
+		
+		
+		
+	}
+	@AfterTest
+	public void closeSession() {
+		
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package Testcases;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import utility.BaseClass;
+import utility.ConfigReader;
+
+public class GuruLogin_TC1 extends BaseClass {
+	
+	ConfigReader config;
+	@Test(priority=1)
+	public void Login_TC01() throws InterruptedException {
+		
+		config = new ConfigReader();
+		driver.findElement(By.name("uid")).sendKeys(config.getUserID());
+		driver.findElement(By.name("password")).sendKeys(config.getPassword());
+		driver.findElement(By.name("btnLogin")).click();
+		Thread.sleep(6000);
+	}
+	@Test(priority=2)
+	public void CreateNewCustomer() throws InterruptedException {
+		
+		config = new ConfigReader();
+		driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[2]/a")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.name("name")).sendKeys(config.getCustomerName());
+		
+		
+	}
+
+}
