@@ -1,0 +1,16 @@
+ChromeDriverpath=./Drivers/chromedriver.exe
+URL=https://demo.guru99.com/v4/
+UserID=mngr403581
+password=epAzaza
+####################### Add New Customer Test Data ####################################################
+CustomerName=RaviKumar
+Gender=male
+DateofBirth=10-04-1974
+Address=Test123
+City=Hyderabad
+State=Telangana
+PIN=500001
+MobileNumber=9502311989
+Email=vinjavarapu4@gmail.com
+Password=Ravi@123
+######################## Edit Customer Test Data ###############################################################

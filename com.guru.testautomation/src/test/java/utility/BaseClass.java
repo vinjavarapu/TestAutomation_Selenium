@@ -25,7 +25,7 @@ public class BaseClass {
 	@AfterTest
 	public void closeSession() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }

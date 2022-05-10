@@ -86,5 +86,13 @@ public class ConfigReader {
 		
 		return pro.getProperty("Password");
 	}
+	public String getCustomerID() {
+		
+		return pro.getProperty("CustomerID");
+	}
+	public String getDeposit() {
+		
+		return pro.getProperty("Deposit");
+	}
 
 }

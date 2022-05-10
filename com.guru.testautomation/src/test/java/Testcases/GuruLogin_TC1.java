@@ -50,5 +50,37 @@ public class GuruLogin_TC1 extends BaseClass {
 		
 		
 	}
+	@Test(enabled=false)
+	public void EditCustomer() throws InterruptedException {
+		
+		config = new ConfigReader();
+		driver.findElement(By.linkText("Edit Customer")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.name("cusid")).sendKeys(config.getCustomerID());
+		driver.findElement(By.name("AccSubmit")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.name("pinno")).clear();
+		Thread.sleep(4000);
+		driver.findElement(By.name("pinno")).sendKeys("500018");
+		driver.findElement(By.name("sub")).click();
+		Thread.sleep(5000);
+		
+	}
+	@Test(priority=2)
+	public void CreateNewAccount() throws InterruptedException {
+		
+		config = new ConfigReader();
+		driver.findElement(By.linkText("New Account")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.name("cusid")).sendKeys(config.getCustomerID());
+		driver.findElement(By.name("inideposit")).sendKeys(config.getDeposit());
+		driver.findElement(By.name("button2")).click();
+		Thread.sleep(5000);
+		WebElement confirmmessage = driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/p"));
+		String displaymsg = confirmmessage.getText();
+		System.out.println(displaymsg);
+		assertEquals(displaymsg,"Account Generated Successfully!!!");
+		
+	}
 
 }
